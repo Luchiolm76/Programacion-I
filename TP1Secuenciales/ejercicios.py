@@ -1,5 +1,5 @@
 #Ejercicio1
-#print("Hola Mundo!")
+print("Hola Mundo!")
 
 #Ejercicio2
 #nombre = input ("Ingrese su nombre:")   
