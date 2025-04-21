@@ -3,7 +3,7 @@ impares = 0
 positivos = 0
 negativos = 0
 
-for i in range(5):
+for i in range(100):
     num = int(input("Ingrese 100 numeros enteros: "))
     if num % 2 == 0:
         pares = pares + 1
