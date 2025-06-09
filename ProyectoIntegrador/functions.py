@@ -40,7 +40,7 @@ def quick_sort(juegos, key):
     return quick_sort(left, key) + middle + quick_sort(right, key)
 
 
-# Ordenamos la lista de juegos por puntaje usando quicksort
+# Ordenamos la lista de juegoss por puntaje usando quicksort
 print("Lista de juegos ordenada por puntaje mediante quicksort:")
 juegos_ordenadosQS = quick_sort(juegos, 'anio')  # Ordenamos por año
 print(juegos_ordenadosQS)  # Imprimimos la lista ordenada por año

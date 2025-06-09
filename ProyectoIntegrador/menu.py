@@ -1,4 +1,4 @@
-
+import functions
 
 def menu():
     print("Bienvenido al programa de buscador de juegos")
