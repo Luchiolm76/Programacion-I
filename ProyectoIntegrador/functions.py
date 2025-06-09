@@ -28,7 +28,7 @@ def quick_sort(juegos, key):
     left = []
     middle = []
     right = []
-    # Elegimos un pivote, en este caso el elemento del medio
+    # Elegimos un pivote, en este casoo el elemento del medio
     pivot = juegos[len(juegos) // 2][key]
     for x in juegos:
         if x[key] < pivot:
