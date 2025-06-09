@@ -21,6 +21,30 @@ def bubble_sort(juegos, key):
     # Retornamos la lista ordenada
     return juegos
 
+
+def quick_sort(juegos, key):
+    if len(juegos) <= 1:
+        return juegos
+    left = []
+    middle = []
+    right = []
+    # Elegimos un pivote, en este caso el elemento del medio
+    pivot = juegos[len(juegos) // 2][key]
+    for x in juegos:
+        if x[key] < pivot:
+            left.append(x)
+        elif x[key] > pivot:
+            right.append(x)
+        else:
+            middle.append(x)
+    return quick_sort(left, key) + middle + quick_sort(right, key)
+
+
+# Ordenamos la lista de juegos por puntaje usando quicksort
+print("Lista de juegos ordenada por puntaje mediante quicksort:")
+juegos_ordenadosQS = quick_sort(juegos, 'anio')  # Ordenamos por año
+print(juegos_ordenadosQS)  # Imprimimos la lista ordenada por año
+
 def busqueda_binaria(lista, clave, valor):
     inicio = 0
     fin = len(lista) - 1
@@ -47,8 +71,10 @@ def busqueda_binaria(lista, clave, valor):
     return resultados
 
 # Ordenar la lista antes de buscar
+print("Lista de juegos ordenada por año mediante bubble sort:")
 juegos_ordenados = bubble_sort(juegos, 'anio') # Ordenamos por puntaje
-print(busqueda_binaria(juegos_ordenados, 'anio', 2018))  # Debería retornar los juegos de 2018
+print(juegos_ordenados)  # Imprimimos la lista ordenada por año
+#print(busqueda_binaria(juegos_ordenados, 'anio', 2018))  # Debería retornar los juegos de 2018
 
 
 def busqueda_lineal(lista, clave, valor):
@@ -59,8 +85,5 @@ def busqueda_lineal(lista, clave, valor):
     return resultados
 
 
-print("Búsqueda lineal de juegos de 2018:")
-# Ordenar la lista antes de buscar
-print(busqueda_lineal(juegos, 'anio', 2018))  # Debería retornar los juegos de 2018
 
 
