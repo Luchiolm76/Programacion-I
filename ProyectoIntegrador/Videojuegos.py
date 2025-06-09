@@ -11,7 +11,7 @@ videojuegos = [
     {"nombre": "Hollow Knight", "año": 2017, "género": "Metroidvania", "puntuación": 9.0},
     {"nombre": "Dark Souls III", "año": 2016, "género": "RPG", "puntuación": 8.9}
 ]
-# Esto es basicamente la funcion que recibe la lista de videojuegos y va ordenando de par en par, es decir que compara dos videojuegos y el que tenga mejor puntuacion pasa para arriba, se llama buble sort.
+# Esto es basicamente la funcion que recibe la listaa de videojuegos y va ordenando de par en par, es decir que compara dos videojuegos y el que tenga mejor puntuacion pasa para arriba, se llama buble sort.
 def ordenar_por_puntuacion(lista):
     n = len(lista)
     for i in range(n - 1):
