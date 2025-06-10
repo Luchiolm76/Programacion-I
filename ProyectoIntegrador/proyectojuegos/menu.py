@@ -69,11 +69,11 @@ def menu():
             print("================================================")
             clave = input("Ingrese la clave por la que desea buscar (titulo, anio, puntaje): ")
             clave = clave.lower()  # Convertimos la clave a minúsculas para evitar problemas de mayúsculas/minúsculas
-            valor = input(f"Ingrese el valor de {clave} que desea buscar: ")
+            valor = int(input(f"Ingrese el valor de {clave} que desea buscar: "))
             if clave in ['titulo', 'anio', 'puntaje']:
                 if clave == 'anio':
                     valor = int(valor)
-                resultados = busqueda_lineal(juegos_ordenados, clave.lower(), valor)
+                resultados = busqueda_lineal(juegos_ordenados, clave, valor)
                 print(f"Resultados de la búsqueda lineal por {clave} = {valor}:")
                 if resultados:
                     for juego in resultados:

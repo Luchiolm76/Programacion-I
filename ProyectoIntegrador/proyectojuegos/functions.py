@@ -13,7 +13,7 @@ def bubble_sort(juegos, key):
     return juegos
 
 #ordenamiento quick sort
-def quick_sort(juegos, key):  
+def quick_sort(juegos, key):
     if len(juegos) <= 1:
         return juegos
     left = []
@@ -31,8 +31,7 @@ def quick_sort(juegos, key):
     return quick_sort(left, key) + middle + quick_sort(right, key)
 
 
-
-
+# Busqueda binaria para encontrar juegos por clave y valor
 def busqueda_binaria(lista, clave, valor): 
     inicio = 0
     fin = len(lista) - 1
